@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css');
+
+.main-content {
+  width:750px;
+  margin: 20px auto;
+}
+
+.title {
+  color: #C70039;
+  margin-bottom: 20px;
+}
+
+.rcontent {
+  margin-top: 15px;
+}
+
+
+.error {
+  color: red;
+}

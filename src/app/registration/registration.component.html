@@ -1,0 +1,26 @@
+<div class="col-md-9">
+  <form (ngSubmit)="onSubmit(regForm)" #regForm="ngForm" *ngIf="!isSubmitted">
+	  <div class="form-group">
+		  <label>Name</label>
+      <input type="text" class="form-control" id="name" name="name" required #name="ngModel" [(ngModel)]="model.name">
+      <small [hidden]="name.valid || name.pristine" class="form-text error">Name should not be empty.</small>
+    </div>
+    <div class="form-group">
+      <label>City</label>
+      <input type="text" class="form-control" id="city" name="city" required #city="ngModel" [(ngModel)]="model.city">
+      <small [hidden]="city.valid || city.pristine" class="form-text error">City should not be empty.</small>
+    </div>
+    <div class="form-group">
+      <label>Country</label>
+      <input type="text" class="form-control" id="country" name="country" required #country="ngModel" [(ngModel)]="model.country">
+      <small [hidden]="country.valid || country.pristine" class="form-text error">Country should not be empty.</small>
+    </div>
+    <button type="submit" [disabled]="!regForm.form.valid" class="btn btn-primary">Submit</button>
+  </form>
+   <div *ngIf="isSubmitted">
+     <div class="alert alert-primary" role="alert">
+        User has been added. Click <a routerLink="/users">Here</a> to view users.
+      </div><br>
+      <button type="button" class="btn btn-outline-primary" (click)="reset()">Back to Registration</button>
+    </div>
+</div>
