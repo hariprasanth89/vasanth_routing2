@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { DataService } from './data.service';
 import { RegistrationComponent } from './registration/registration.component';
-
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 /*const appRoutes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'users', component: UsersComponent, data: { title: 'Heroes List' } },
@@ -29,7 +29,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(
+  imports: [BrowserModule, FormsModule,HttpClientModule,HttpClientJsonpModule, RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } 
     )],
